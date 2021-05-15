@@ -58,6 +58,9 @@ body{
     align-items: center;
   }
 
+  .toggle {
+    display: none;
+  }
   
 
 
@@ -696,6 +699,10 @@ body{
       margin: 0 auto;
     }
 
+    .toggle {
+      display: block;
+    }
+
     .nav {
       display: none;
       flex-direction: column;
@@ -722,6 +729,7 @@ body{
     .intro{
       height: 1000px;
     }
+
     .intro__style{
       flex-wrap: nowrap;
       align-items: center;
@@ -743,4 +751,61 @@ body{
 
     /* Imposed Trial */
 
+  }
+
+  @media screen and (max-width: 768px) {
+    /* Other Stuff For Mobile */
+    .header__logo {
+      margin-left: 20px;
+    }
+
+    .intro__left {
+      width: 75%;
+    }
+    
+    .intro__right {
+      width: 100%;
+    }
+
+    .imposed__content {
+      width: 100%;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .right_block__text {
+      display: none;
+    }
+
+    .subintro__style {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 205px;
+    }
+
+    .subintro__left, .subintro__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .subintro__right {
+      width: 50%;
+      padding-top: 0px;
+    }
+
+    .features {
+      height: 960px;
+    }
+
+    .features__all_blocks {
+      flex-wrap: wrap;
+    }
+
+    .features__block {
+      width: 32%;
+      margin-bottom: 10px;
+    }
   }
