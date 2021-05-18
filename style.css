@@ -167,8 +167,8 @@ body{
     letter-spacing: 0.252px;
   }
   .intro__input{
-    width: 448px;
-    height: 56px;
+    width: 100%;
+    max-width: 500px;
   }
   .intro__input_text{
     width: 448px;
@@ -183,7 +183,8 @@ body{
   }
 
   .intro__input_button{
-    width: 179px;
+    width: 100%;
+    max-width: 179px;
     height: 40px;
     position: relative;
     left: 257px;
@@ -256,10 +257,10 @@ body{
     height: 700px;
     display: flex;
     padding-top: 250px;
+    justify-content: space-between;
   }
 
   .subintro__left{
-    width: 600px;
     height: 100%;
   }
   .subintro__left_text{
@@ -345,13 +346,9 @@ body{
     display: flex;
   }
   .benefits__block_left{
-    width: 50%;
-    height: 696px;
     text-align: right;
   }
   .benefits__block_right{
-    width: 50%;
-    height: 696px;
     text-align: left;
   }
   .benefits__block_left, .benefits__block_right{
@@ -445,7 +442,6 @@ body{
   }
 
   .imposed__security_content{
-    width: 653px;
     margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -462,16 +458,15 @@ body{
   /* Quote */
   .quote{
     width: 100%;
-    height: 852px;
     background-color: #592141;
   }
   .quote__style {
     display: flex;
     width: 828px;
-    height: 852px;
     align-content: center;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
   }
   .quote_minititle{
     font-size: 14px;
@@ -607,7 +602,8 @@ body{
     color: #fff;
   }
   .yourtrial__input{
-    width: 434px;
+    width: 100%;
+    max-width: 450px;
     height: 56px;
   }
   .yourtrial__input_text{
@@ -753,7 +749,7 @@ body{
 
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 800px) {
     /* Other Stuff For Mobile */
     .header__logo {
       margin-left: 20px;
@@ -762,9 +758,22 @@ body{
     .intro__left {
       width: 75%;
     }
-    
     .intro__right {
-      width: 100%;
+      width: 75%;
+      justify-content: center;
+    }
+    .intro__right_img{
+      width: 400px;
+      height: 300px;
+    }
+
+    .intro__input_text{
+      width: 350px;
+    }
+
+    .intro__input_button{
+      max-width: 150px;
+      left: 180px;
     }
 
     .imposed__content {
@@ -775,6 +784,13 @@ body{
 
     .right_block__text {
       display: none;
+    }
+
+    .benefits__block{
+      flex-direction: column;
+    }
+    .benefits__block_left, .benefits__block_right{
+      text-align: center;
     }
 
     .subintro__style {
@@ -792,7 +808,7 @@ body{
     }
 
     .subintro__right {
-      width: 50%;
+      width: 80%;
       padding-top: 0px;
     }
 
@@ -807,5 +823,94 @@ body{
     .features__block {
       width: 32%;
       margin-bottom: 10px;
+    }
+
+    .companies__style{
+      justify-content: flex-start;
+    }
+    .companies__title{
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+    .companies__all_blocks{
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+    .companies__block{
+      width: 40%;
+      margin-bottom: 5px;
+      margin-right: 5px;
+    }
+  }
+  @media screen and (max-width: 460px) {
+    .intro__input_text{
+      width: 300px;
+    }
+    .intro__right_img{
+      width: 350px;
+      height: 250px;
+    }
+    .intro__input_button{
+      font-size: 11.5px;
+      width: 100px;
+      left: 185px;
+    }
+    .subintro__right_block{
+      flex-wrap: nowrap;
+    }
+    .companies__style{
+      justify-content: flex-start;
+    }
+    .companies__title{
+      margin-top: 50px;
+      margin-bottom: 100px;
+    }
+    .companies__all_blocks{
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+    .companies__block{
+      width: 40%;
+      margin-bottom: 5px;
+      margin-right: 5px;
+    }
+    /* .benefits__block{
+      flex-direction: column;
+    }
+    .benefits__block_left, .benefits__block_right{
+      text-align: center;
+    } */
+    .imposed__trial_style{
+      flex-direction: column;
+    }
+    .imposed__trial{
+      bottom: 125px;
+      height: 255px;
+    }
+    .trial__title_left, .trial__title_right{
+      font-size: 26px;
+    }
+    .imposed__trial_left, .imposed__trial_right{
+      width: 350px;
+    }
+    .imposed__trial_left{
+      border-right: 0;
+      border-bottom: 1px solid rgba(30, 25, 40, 0.16);
+    }
+    .yourtrial__input{
+      max-width: 350px;
+    }
+    .yourtrial__input_text{
+      width: 350px;
+    }
+    .yourtrial__input_button{
+      width: 140px;
+      left: 200px;
+    }
+    .your__trial_text{
+      width: 70%;
+      text-align: center;
     }
   }
