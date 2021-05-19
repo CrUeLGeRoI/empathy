@@ -7,3 +7,4 @@ function openMenu () {
 
     menu.classList.toggle('opened')
 }
+

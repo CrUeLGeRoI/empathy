@@ -345,6 +345,9 @@ body{
     max-width: 1200px;
     display: flex;
   }
+  .closed{
+    display: none;
+  }
   .benefits__block_left{
     text-align: right;
   }
@@ -686,6 +689,10 @@ body{
     font-size: 40px;
   }
 
+  .swiper-alert {
+    display: none;
+  }
+
   /* Mobile */
   @media screen and (max-width: 1200px) {
     /* Other Stuff For Mobile */
@@ -734,8 +741,11 @@ body{
 
     /* Benefits Mobile */
 
-    .benefits__block:nth-child(-n+4) {
+    .benefits__style {
       display: none;
+    }
+    .swiper-alert {
+      display: block;
     }
 
     /* Imposed Mobile */
@@ -858,6 +868,9 @@ body{
     }
     .subintro__right_block{
       flex-wrap: nowrap;
+    }
+    .closed{
+      display: block;
     }
     .companies__style{
       justify-content: flex-start;
